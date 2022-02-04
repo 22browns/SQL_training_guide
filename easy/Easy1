@@ -1,0 +1,22 @@
+
+For the following problems we will be utilizing the 'Agents' table. Make sure you have this table uploaded into your own browser.
+
+
+
+Select all values from the ‘Agents’ table.
+
+
+
+Select all of the agents that make a commission of ‘0.15’
+
+
+
+Select the names of the agents that work out of Bangalore
+
+
+
+Select the Agent code and Phone number of the agents who work out of London OR Bangalore
+
+
+
+Select the Agent Code of the agents who earn a commission of 0.11, but are not named ‘Mukesh’
