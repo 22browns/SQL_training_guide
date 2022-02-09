@@ -1,5 +1,5 @@
 For the first lesson, you will learn how to use and write a select statement, sort through data with a 'where' statement, as well as write multiple 
-where statements by utilizing an 'and', 'or' or 'not statement.
+where statements by utilizing an 'and', 'or' or 'not' statement.
 
                                                               LEARNING
 *SELECT*
@@ -11,7 +11,7 @@ Eg: Select * from agents
 
 *WHERE*
 Where [expression]
-Eg: Where age<30
+Eg: Where age < 30
   - Where statement gives a parameter to limit the amount of results that appear
   - The expression you are testing is going to be a simple mathematical expression with two numerics and an operator
   
