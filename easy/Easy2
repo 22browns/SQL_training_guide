@@ -17,6 +17,21 @@ Eg: Order by cust_name asc
   - You can order a table by multiple columns (order by column_1, column_2 [asc/desc]) If you do this, it will first order the rows by the first table.
     Once this is done, if there are multiple rows with the same value in column 1, it will adjust the order according to column 2.
     SHOW AN EXAMPLE OF THIS
+    
+*Like and Wildcards*
+Where [column name] like [value]
+Eg: Where name like 'H%'
+  - A like statement is used in place of a comparator in a mathematical expression (<,>,=)
+  - Must put your phrase within single quotes
+  - % symbol is a wildcard that is used to represent ‘anything’
+  - In other words, any amount of characters with any different sequence of those characters can appear after 2017 in the fromDate for it to be selected
+    This includes no characters at all
+  - In the example, any row that has a from date that begins with ‘2017’ will be selected
+  - You can place multiple percent symbols like such ‘%2017%’ and this means that as long as 2017 appears somewhere within the fromDate, that row will 
+    be selected
+
+
+
 For the following problems we will be utilizing the CUSTOMERS table. All problems can be solved using the Customers table.
 Make sure you have this table uploaded into your browser before starting
 
