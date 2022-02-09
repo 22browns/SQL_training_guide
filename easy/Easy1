@@ -1,6 +1,7 @@
 For the first lesson, you will learn how to use and write a select statement, sort through data with a 'where' statement, as well as write multiple 
 where statements by utilizing an 'and', 'or' or 'not statement.
 
+                                                              LEARNING
 *SELECT*
 Select  [column names]  from  [table]
 Eg: Select * from agents
