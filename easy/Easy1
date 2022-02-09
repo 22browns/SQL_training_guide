@@ -1,3 +1,36 @@
+For the first lesson, you will learn how to use and write a select statement, sort through data with a 'where' statement, as well as write multiple 
+where statements by utilizing an 'and', 'or' or 'not statement.
+
+*SELECT*
+Select  [column names]  from  [table]
+Eg: Select * from agents
+  - Select is a statement that tells the computer that you want to access a table
+  - * means “Everything”. This means that you want to view all of the contents of a given table
+  - The asterik can be replaced with specific column names of a table if you only want to view those
+
+*WHERE*
+Where [expression]
+Eg: Where age<30
+  - Where statement gives a parameter to limit the amount of results that appear
+  - The expression you are testing is going to be a simple mathematical expression with two numerics and an operator
+  
+    OPERATORS:(greater than [>] less than [<] equal [=] not equal [!= or <>] greater than or equal [>=] less than or equal [<=] 
+              *There are also the 'between', 'in' and 'like' operators, but you will learn about those later on.
+              
+  - In the example, SQL will only output a row of data if the age is less than 30
+  - A where statement must be preceeded by a select statement (eg: select * from agents where age > 30)
+
+*AND/OR/NOT*
+Where [expression] [AND, OR, NOT] where [expression]
+Eg: Where age < 30 AND salary > 100000
+  - And, or, or not statements are used to combine 'where' statements so that there are multiple parameters that are being tested
+  - AND means that both parameters must be true for the row of data to pass
+  - OR means that at least 1 parameter must be true for the row of data to pass
+  - NOT specifies that the expression that follows it can not be true, while the previous expression must be true
+      Make note of the following: (Where age > 30 NOT gender = 'male') is the same thing as writing (Where age > 30 AND gender != 'male')
+      Both of those statements will find all individuals who are older than 30 and not male
+
+                                                             PROBLEMS
 
 For the following problems we will be utilizing the 'Agents' table. Make sure you have this table uploaded into your own browser.
 
