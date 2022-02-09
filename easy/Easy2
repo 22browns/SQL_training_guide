@@ -1,18 +1,37 @@
+For this lesson, you will learn how to use a 'select distinct' statement, order output with 'order by', and compare numerics with a 'like statement.
 
-For the following problems we will be utilizing the customers table. Make sure you have this table uploaded into your browser before starting
+*Select Distinct*
+Select Distinct [column name] from [table]
+Eg: Select Distinct Agent_Code from Customers
+  - Select Distinct is used to select and output values that are not duplicates
+  - For the columns that you identify, it will take out any and all duplicate values, and display what is left
+  - Take a look at the example (eg). Lets say that you only have access to a table of customers, each customer being associated with a working agent. 
+    You could use Select Distinct to get a list of all agents without needing the Agents table.
+    
+*Order by*
+Order by [column name] [asc/desc]
+Eg: Order by cust_name asc
+  - Order by is used to sort data into order according to the specifications that you give
+  - Asc stand for 'ascending' and will sort the data in ascending order. In the example, customer names will be put in alphabetical order.
+  - Desc stands for 'descending' and will sort the data in descending order. If you swap the asc for desc in the example, it will do reverse alphabetical order.
+  - You can order a table by multiple columns (order by column_1, column_2 [asc/desc]) If you do this, it will first order the rows by the first table.
+    Once this is done, if there are multiple rows with the same value in column 1, it will adjust the order according to column 2.
+    SHOW AN EXAMPLE OF THIS
+For the following problems we will be utilizing the CUSTOMERS table. All problems can be solved using the Customers table.
+Make sure you have this table uploaded into your browser before starting
 
 
 
-Select everything from the customer's table and Order the first names of all of the customers in ascending alphabetical order
+1. Select everything from the customer's table and Order the first names of all of the customers in ascending alphabetical order
 
 
 
-Create a list of working areas that contain an “o” somewhere in the middle (Cannot be first or last letter). Do not output any repeats
+2. Create a list of working areas that contain an “o” somewhere in the middle (Cannot be first or last letter). Do not output any repeats
 
 
 
-Find all the customer codes that are greater than 9 where the second to last number is not a 0 and order them in descending order.
+3. Find all the customer codes that are greater than 9 where the second to last number is not a 0 and order them in descending order.
 
 
 
-Create a list of all of the agent codes that do not have a “1” in their name and order that list in descending order
+4. Create a list of all of the agent codes that do not have a “1” in their name and order that list in descending order
