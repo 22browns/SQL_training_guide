@@ -25,3 +25,9 @@ Eg: Avg(commission)
   - It finds the average by performing a sum and a count simultaneously, and then dividing the sum by the count. 
   
 
+*Min/Max*
+Select Min([column name]) from [table name]
+Eg: Select Min(commission) from Agents
+  - The Min and Max commands will locate the minimum or maximum value in a set of data, and then select that piece of data.
+  - If there are multiple rows that have the same minimum value, it will not display the minimum multiple times. Rather, it will determine what that value is,
+    and display it one time. 
