@@ -1,0 +1,27 @@
+Count/Avg/Sum, Min, and Max)
+For this lesson, you will learn how to do some qick calculations using 'Count', 'Avg' and 'Sum' as well as find the minimum and maximum values in a dataset.
+
+*Count*
+Count [column name]
+Eg: Count distinct(CUST_CITY)
+  - Count statement is used to count up the amount of entries there are within a certain column. It will return the value of the counting in place of the count statement
+  - Therefore, it can be used as part of a calculation, or can just be displayed as part of the query.
+  - Especially useful when paired with a distinct statement
+    - If you take a look at the example, it will display the number of distinct cities that the spy agency has customers in.
+    
+*Sum*
+Sum [column name] 
+Eg: Sum paid
+  - Unlike a count statement, a sum statement goes through each data entry and adds the values within them up.
+  - Just like a count statement, this value is returned to the location of the command that it is typed, so it can be used as a part of a calculation, or just displayed as a part of the query.
+  - When attempting to use the sum command, make sure that you have a proper data type for the column you are adding in. If a numeric is entered in as a non-numeric datatype,
+    (eg: '123' entered as a varchar datatype) the sum command will not work; however, if you would still like to add data with the wrong datatype, reference the 'Cast' command 
+    located in future lessons.
+
+*Avg*
+Avg([colum_name])
+Eg: Avg(commission)
+  - The average function 'avg' will output the average value of a set of data. 
+  - It finds the average by performing a sum and a count simultaneously, and then dividing the sum by the count. 
+  
+
