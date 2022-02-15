@@ -1,0 +1,25 @@
+
+For this lesson you will learn two more operators for having multiple where statements in a single query. 
+
+*In*
+Where [column name] IN ([value1], [value 2], ...);
+Eg: Where ORD_AMOUNT IN (1000,2000,3000);
+  - An 'IN' statement is used to wrtie multiple 'OR' statements quickly
+      - Same thing as writing { Where [column] = [value1] OR [column] = [value2] ......}
+  - This statement will select each record (row of data) where the specified column matches any one of the values within the parentheses
+  - Within the parentheses you can also nest a select statement 
+      - Select * from Agents 
+        Where AGENT_CODE IN (Select AGENT_CODE from Orders Where ORD_AMOUNT > 4000)
+      - This example Will provide the information of all of the agents who have completed an order greater than $4000 dollars. 
+      
+*Between*
+Where [column] BETWEEN [value1] and [value2];
+Eg: Where CustomerID BETWEEN 5 and 14;
+    - Between statements are used to indicate a range of values that you wish to select 
+    - These statements are inclustiory of the maximum and minimum values that you indicated
+        - Think of it as a 'greater than or equal' and 'less than or equal' sign  ------>  5 <= x <= 14
+    - Between statements can be applied to more than numeric values. If you place words in the place of numbers, it will find all values that are
+      between the two indicated words alphabetically
+    - Placing a 'NOT' statement before 'BETWEEN' i.e 'NOT BETWEEN' will find all values outside of the indicated range
+ 
+  
