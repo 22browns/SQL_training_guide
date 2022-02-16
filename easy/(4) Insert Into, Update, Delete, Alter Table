@@ -4,5 +4,14 @@ For this lesson, you will learn how to
 *Insert Into*
 INSERT INTO [table] ([column1], [column2], [column3], ...)
 VALUES ([value1], [value2], [value3], ...)
-  - Insert into is used to insert new records (rows of data) into an existing table.
-  - 
+  - Insert into is used to add new records (rows of data) into an existing table.
+  - This statement is what was used to create the tables on the franchise.cloud.app website
+  - If you are using an INSERT INTO statement and have values for each column of your table, the column names are not necessary
+      INSERT INTO [table]
+      VALUES ([value1], [value2], [value3], ...)
+      
+*Update*
+
+
+  - UPDATE is used to change existing records within a table
+  
