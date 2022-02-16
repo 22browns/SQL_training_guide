@@ -11,7 +11,29 @@ VALUES ([value1], [value2], [value3], ...)
       VALUES ([value1], [value2], [value3], ...)
       
 *Update*
-
-
+UPDATE [table] 
+SET [column name] = [value1], [column name] = [value2],...
+WHERE [expression];
   - UPDATE is used to change existing records within a table
+  - Think of this as a 'find and replace' feature in word documents. THe code will identify all instances of a certain value, and change it to whatever you would like.
+  - Make sure that you include a where clause. If you omit it, you will change the entire column to be that value.
+  - There is no 'undo' feature in SQL, so it might be a good idea to backup your table/database before attempting to update the data.
   
+*Delete*
+DELETE FROM [table]
+WHERE [expression];
+  - DELETE is used to remove records (rows of data) from the table.
+  - Like the UPDATE statement, you must caution yourself. If you do not have a where clause, everything will be deleted form the table.
+      - The table will still exist, but have no records within it.
+      
+*Alter Table*
+ALTER TABLE [table]
+[ADD/DROP COLUMN/ALTER] [column] [datatype];
+  - ALTER TABLE is used to either add, delete, or alter columns within a table.
+  - ADD will add a column of the specified datatype to the tail end of the table. Once added, you can insert values.
+  - DROP COLUMN will remove the entire column that you specified. With a drop statement you do not include a datatype indicator.
+      - ALTER TABLE [table] DROP COLUMN [column];
+  - ALTER COLUMN can be used to change which kind of datatype the column can store.
+      - If there are no records in your table, you can convert between any two datatypes.
+      - If there are already records, the two datatypes you are converting between must be compatible, otherwise you will get a conversion error.
+  - Feel free to go back to the '(0) Introduction' file to see a list of all datatypes.
