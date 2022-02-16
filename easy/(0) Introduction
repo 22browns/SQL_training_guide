@@ -1,2 +1,23 @@
 Welcome to the SQL training program. 
 In this 15 part program, you will learn many of the basic and advanced skills that are necessary to becoming proficient in SQL.
+
+Before you start, there are a few things that should be established.
+
+CAPITILIZATION RULES
+  - SQL is a non-case-dependent coding language. In other words, it does not matter if you start commands with a capital or lowercase letter
+  - If you have prior coding experience, it may seem unnatural, but both of these statements are valid, and will execute perfectly
+      Select * from Agents where commission > 1000;
+      sElEcT * FRoM aGENts wheRe CoMmIsSiOn > 1000;
+  - However, there are best practices to capitilization in SQL, so it is important to establish those best practices as quick as possible so others can read your code!
+  
+  - Rule 1: Any overarching command (called a statement) should be in all caps. Statements are basically the keywords of SQL.
+    The first few statements you will learn are SELECT, FROM, WHERE, AND, OR, NOT
+  - Rule 2: Any reference to a table should be written in UpperCamelCase
+  - Rule 3: Any reference to a specific column with a table should also be written in UpperCamelCase
+  
+ADDITIONAL INFORMATION
+  - A 'record' is what we call a row/line of data. One record = One row. i.e a table with 5 rows has 5 records
+  - A 'query' is one chunk of code. SQL is used to search for information within a database, and queries are what are used to ask those questions. 
+    A query is best defined as the culmination of the combination of statements to ask a specific question.
+    
+ NEXT STEP: Go back to the 'easy' homepage, and select '(1) Select : Where : And-Or-Not'
