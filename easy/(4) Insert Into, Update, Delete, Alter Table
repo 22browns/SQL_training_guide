@@ -1,0 +1,8 @@
+Insert Into, Update, Delete, Alter Table
+For this lesson, you will learn how to 
+
+*Insert Into*
+INSERT INTO [table] ([column1], [column2], [column3], ...)
+VALUES ([value1], [value2], [value3], ...)
+  - Insert into is used to insert new records (rows of data) into an existing table.
+  - 
