@@ -1,1 +1,12 @@
+For this lesson, you will learn 3 out of the 5 types of joins. The five types of joins are as follows:
 
+Inner Join, Left Join, Right Join, Full Join, Self Join
+**Full Joins and Self Joins are not supported by the franchise.cloud.app website. You will have to find a new software to practce those skills**
+
+In this lesson you will learn the Inner, Left, and Right join statements.
+In general, join statements are used to combine the data of two or more tables into one cohesive table.
+
+*Inner Join*
+SELECT [columns] FROM [table1]
+INNER JOIN [table2] ON [column].[table1] = [column].[table2];
+  - Inner Join will 
