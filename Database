@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `CUST_COUNTRY` varchar(20) NOT NULL,
   `GRADE` decimal(10,0) DEFAULT NULL,
   `OPENING_AMT` decimal(12,2) NOT NULL,
-  `PAYMENT_AMT` decimal(12,2) NOT NULL,
+  `PAYMENT_AMT` decimal(12,2),
   `DATE_OPENED` varchar(35) NOT NULL,
   `PHONE_NO` varchar(17),
   `AGENT_CODE` varchar(6) DEFAULT NULL
@@ -87,28 +87,28 @@ INSERT INTO `customer` (`CUST_CODE`, `CUST_NAME`, `CUST_CITY`, `WORKING_AREA`, `
 ('C00013','Holmes','London','London','UK','2','6000.00','7000.00','2008-08-30','111-111-1111','A003')
 ,('C00001','Micheal','New York','New York','USA','2','3000.00','2000.00','2007-06-08','111-111-1112','A008')
 ,('C00020','Albert','New York','New York','USA','3','5000.00','6000.00','2010-01-15','111-11-1113','A008')
-,('C00025','Ravindran','Bangalore','Bangalore','India','2','5000.00','','2007-12-22','111-111-1114','A011')
+,('C00025','Ravindran','Bangalore','Bangalore','India','2','5000.00',null,'2007-12-22','111-111-1114','A011')
 ,('C00024','Cook','London','London','UK','2','4000.00','7000.00','2008-09-07','111-111-1115','A006')
 ,('C00015','Stuart','London','London','UK','1','6000.00','3000.00','2009-09-18','111-111-116','A003')
 ,('C00002','Bolt','New York','New York','USA','3','5000.00','9000.00','2011-04-02','111-111-1117','A008')
-,('C00018','Fleming','Brisban','Brisban','Australia','2','7000.00','','2007-03-07','111-111-1118','A005')
+,('C00018','Fleming','Brisban','Brisban','Australia','2','7000.00',null,'2007-03-07','111-111-1118','A005')
 ,('C00021','Jacks','Brisban','Brisban','Australia','1','7000.00','7000.00','2007-01-18','111-111-1119','A005')
 ,('C00019','Yearannaidu','Chennai','Chennai','India','1','8000.00','7000.00','2004-04-07','222-111-1120','A010')
 ,('C00005','Sasikant','Mumbai','Mumbai','India','1','7000.00','7000.00','2010-03-19','222-11-1121','A002')
-,('C00007','Ramanathan','Chennai','Chennai','India','1','7000.00','','2008-09-12','222-111-1122','A010')
+,('C00007','Ramanathan','Chennai','Chennai','India','1','7000.00',null,'2008-09-12','222-111-1122','A010')
 ,('C00022','Avinash','Mumbai','Mumbai','India','2','7000.00','9000.00','2010-07-22','222-111-1123','A002')
 ,('C00004','Winston','Brisban','Brisban','Australia','1','5000.00','7000.00','2013-06-08','222-111-1124','A005')
 ,('C00023','Karl','London','London','UK','0','4000.00','7000.00','2006-04-16','222-111-1125','A006')
-,('C00006','Shilton','Torento','Torento','Canada','1','10000.00','','2008-11-01','11-111-1126','A004')
+,('C00006','Shilton','Torento','Torento','Canada','1','10000.00',null,'2008-11-01','11-111-1126','A004')
 ,('C00010','Charles','Hampshair','Hampshair','UK','3','6000.00','5000.00','2006-09-15','222-111-1127','A009')
 ,('C00017','Srinivas','Bangalore','Bangalore','India','2','8000.00','3000.00','2007-02-10','11-111-1128','A007')
 ,('C00012','Steven','San Jose','San Jose','USA','1','5000.00','9000.00','2008-12-01','222-111-1129','A012')
-,('C00008','Karolina','Torento','Torento','Canada','1','7000.00','','2005-04-11','333-111-1130','A004')
+,('C00008','Karolina','Torento','Torento','Canada','1','7000.00',null,'2005-04-11','333-111-1130','A004')
 ,('C00003','Martin','Torento','Torento','Canada','2','8000.00','7000.00','2006-06-09','333-111-1131','A004')
 ,('C00009','Ramesh','Mumbai','Mumbai','India','3','8000.00','3000.00','2009-04-20','333-111-1132','A002')
-,('C00014','Rangarappa','Bangalore','Bangalore','India','2','8000.00','','2008-11-15','333-111-1133','A001')
+,('C00014','Rangarappa','Bangalore','Bangalore','India','2','8000.00',null,'2008-11-15','333-111-1133','A001')
 ,('C00016','Venkatpati','Bangalore','Bangalore','India','2','8000.00','7000.00','2009-10-08','33-111-1134','A007')
-,('C00011','Sundariya','Chennai','Chennai','India','3','7000.00','7000.00','2007-10-31','33-111-1135','A010');		
+,('C00011','Sundariya','Chennai','Chennai','India','3','7000.00','7000.00','2007-10-31','33-111-1135','A010');
 
 -- --------------------------------------------------------
 New Table
