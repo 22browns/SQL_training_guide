@@ -6,7 +6,81 @@ Inner Join, Left Join, Right Join, Full Join, Self Join
 In this lesson you will learn the Inner, Left, and Right join statements.
 In general, join statements are used to combine the data of two or more tables into one cohesive table.
 
+SELECT [columns] FROM [table1]
+[JOIN] [table2] ON [column].[table1] = [column].[table2];
+
+  - All joins are similar in that they combine two tables by comparing values of a certain column to match up records
+  - The section of the above code that says ON [column].[table1] = [column].[table2]; provides the software information on which column you want to match records on.
+  - That section of code is the most difficult part to grasp, so lets break it down further. Lets say that we have these two (very simple) tables.
+  
+                                       Table 1 - Names                                              Table 2 - Salaries
+                                EmployeeID             Name                                  EmployeeID              Salary
+                                    1                 Amanda                                     2                   100000
+                                    2                 Bill                                       3                   80000
+                                    3                 Courtney                                   5                   65000
+                                    4                 David                                      6                   95000
+                                    5                 Eli                                        7                   80000
+                                    6                 Ferguson                                   8                   130000
+                                    7                 Gabriel                                    9                   140000
+                                    
+  - The column that these two tables have in common is the EmployeeID, so this will be the column that we will join the two tables on EmployeeID.
+  - Taking a look at the JOIN syntax format, we will replace [column] with 'EmployeeID' for each table because that is the name of the ID column for both tables.
+  - The the final code for joining these two tables should end up looking like this
+           SELECT * FROM Names
+           [JOIN] Salaries
+           ON EmployeeID.Names = EmployeeID.Salaries;
+  - That is the format you will use for all of the different joins, the only thing that will change is what you reaplce [JOIN] with.
+  - Now lets get into what each type of join does.
+           
 *Inner Join*
 SELECT [columns] FROM [table1]
 INNER JOIN [table2] ON [column].[table1] = [column].[table2];
-  - Inner Join will 
+  - INNER JOIN will select the records from each table ONLY WHEN there is a match in the EmployeeID column
+  - Between the two tables, Employee 1 and 4 from Names have no match. Also, Employee 8 and 9 from Salaries have no match.
+  - Because of this, Employess 1, 4, 8, and 9 will be selected, and will not appear in the output table. Therefore, the output of an INNER JOIN of the tables will be:
+                                                                           
+                                                         EmployeeID          Name            Salary
+                                                              2              Bill            100000
+                                                              3              Courtney        80000
+                                                              5              Eli             65000
+                                                              6              Ferguson        95000
+                                                              7              Gabriel         80000
+
+*Left Join*
+SELECT [columns] FROM [table1]
+LEFT JOIN [table2] ON [column].[table1] = [column].[table2];
+  - LEFT JOIN will keep all of the contents of the left table (table 1), and will add the records of the right table only if there is a match
+  - Employees 1-7 will all appear in the output because they are in the left table. The software will then add salary information if it is held within the right table.
+  - You may be wondering what will be down as the salary for employee 1 and 4 (who dont appear in the salaries table). The answer: Nothing. That cell will be a 'Null' value.
+  - Unlike INNER JOIN, LEFT JOIN has the ability to output a table with null cells.
+  - Here is what the table will look like for a left join.
+  
+                                                          EmployeeID          Name            Salary
+                                                              1              Amanda          
+                                                              2              Bill             100000
+                                                              3              Courtney         80000
+                                                              4              David            
+                                                              5              Eli              80000
+                                                              6              Ferguson         95000
+                                                              7              Gabriel          80000
+                                                              
+*Right Join*
+SELECT [columns] FROM [table1]
+RIGHT JOIN [table2] ON [column].[table1] = [column].[table2];
+  - RIGHT JOIN is basically the same thing as LEFT JOIN, except this time we will keep all of the records of the right table (table 2) and add onto it records from the left table.
+  - ***Before reading on, draw out what you believe the output would be for a RIGHT JOIN of the 'Names' and 'Salaries' tables
+  - Employees 2,3,5,6,7,8,9 will be in the outputted table; however, employees 8 and 9 will have a 'null' value for their name. This is what the table will then look like.                                                
+ 
+                                                          EmployeeID          Salary            Name
+                                                              2               100000           Bill
+                                                              3               80000            Courtney 
+                                                              5               65000            Eli
+                                                              6               95000            Ferguson
+                                                              7               80000            Gabriel
+                                                              8               130000  
+                                                              9               140000
+ 
+  
+  
+  
+  
