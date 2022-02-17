@@ -1,1 +1,19 @@
+In this lesson, you will learn the GROUP BY, HAVING, and EXISTS Statements.
 
+*Group By*
+SELECT [AVG/SUM etc...] from [table]
+GROUP BY [column name] 
+  - GROUP BY is most useful when used alongside an aggregate statment such as SUM, AVG, COUNT etc..
+  - What it does is it groups together records that have a matching value in the specified column.
+    Next, it will perform the aggregate statements one time for each grouping, rather than once for the entire table.
+  - For example, if we are in the orders table and wanted to find averages, we could Group by country to determine the average
+    order cost in each country.
+    
+*Having*
+SELECT [columns] FROM [table]
+GROUP BY [column(s)] HAVING [aggregate function condition]
+  - HAVING is used in place of a where statement. This is because a where statement can not be used with an aggregate statement.
+    i.e WHERE AVG(ORD_AMOUNT) > 50; This statement will not run on any SQL software; however, the following will
+    HAVING AVG(ORD_AMOUNT) > 50;
+    
+*
