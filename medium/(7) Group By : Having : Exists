@@ -16,4 +16,9 @@ GROUP BY [column(s)] HAVING [aggregate function condition]
     i.e WHERE AVG(ORD_AMOUNT) > 50; This statement will not run on any SQL software; however, the following will
     HAVING AVG(ORD_AMOUNT) > 50;
     
-*
+*Exists*
+SELECT [columns] FROM [table]
+WHERE EXISTS([subquery]);
+  - What the exists operator does is check to see if any records from the original select statement match
+    any records that are returned by the subquery.
+  
