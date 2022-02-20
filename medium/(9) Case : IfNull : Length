@@ -1,1 +1,36 @@
+In this lesson you will learn the CASE, IFNULL, and Length Statements.
 
+*Case*
+CASE 
+    WHEN [condition1] THEN [result1]
+    WHEN [condition2] THEN [result3]
+    WHEN [condition3] THEN [result3]
+    ELSE [else result]
+END AS [alias];
+  - The CASE statement is used to test for different conditions to make a determination about a set of data. 
+  - It will run through each condition until one of them eqautes to be TRUE. Once a condition tests TRUE, it will stop testing conditions and perform the corresponding result.
+  - If none of the conditions are met, then the 'Else Result' will be performed. 
+  - For example, lets say that you own a shipping company (like UPS). The cost of shipping an item is 100% based on its weight. To determine the cost of each shipment you could 
+    use a CASE statement like so:
+        
+        CASE
+            WHEN weight<10 THEN 'Small - $2.00'
+            WHEN weight >= 10 AND weight < 50 THEN 'Medium - $5.00'
+            WHEN weight >= 50 AND weight < 100 THEN 'Large - $10.00'
+            ELSE 'Too large to determine price'
+        END AS 'Size and Cost';
+
+*IfNull*
+IFNULL( [column], [value] )
+Eg: SELECT ItemName, IFNULL(xWeight, 0) + IFNULL(yWeight, 0);
+  - IFNULL is used to tell the software what to do if an element of a table is NULL. (NULL means that the element is empty. There is no data in that slot.)
+  - It is a necessary function to know because if you attempt to make a calculation but an element is NULL, the entire expression will be returned as NULL.
+      - In some cases this may be OK, but in other situations you would still want the calculation to be done.
+  - In MYSQL, use {IFNULL} or {COALESCE}. In SQL Server use {ISNULL}. In Oracle use {NVL}. - The formatting   ______( [column], [value] )   stays the same for all.
+      
+*Length*
+LENGTH( [column] )
+  - Length is an SQL function used to determine the amount of characters in a variable. (if it is a varchar, it will include any punctuation or spaces)
+  - For example, LENGTH("Hello World.") would return the value '12' because there are 12 characters in the string.
+  - Another example, LENGTH(1234) will return the value '4' because the number 1234 has 4 digits.
+      
