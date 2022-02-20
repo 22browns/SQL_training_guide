@@ -1,5 +1,5 @@
 For this lesson, you will learn how to join tables with Full Join, Self Join. Also, you will learn how to combine records
-from different SELECT statements into one column.
+from different SELECT statements into one column using the UNION Statement.
 
 Full Join and Self Join are the final two of the five join statements that are left to learn. We will follow a similar format for teaching these statements as we did 
 with the rest of the Join statements. We will use the same practice dataset as before.
@@ -37,4 +37,19 @@ FULL OUTER JOIN [table2] ON [column].[table1] = [column].[table2];
                                                          9                         140000
                                                          
 *Self Join*
-hello world my name is finlllllllley alirhgt areeeeeeee wee working now? That is what is eems like
+SELECT A.[table name] AS [alias 1], B.[table name] AS [alias 2]
+FROM [table] A. [table B]
+WHERE [condition]
+  - Out of the 5 different types of joins, self joins are the most irregular. Instead of joining with another table, SELF JOIN will join a table with itself.
+  - Lets say that you have two tables, one for employees and one for managers. In the employee table is an ID, Name, and ManagerID. In the Manager table is a ID, and Name.
+    You should already know that you would be able to see the name of each employee's manager by using a LEFT JOIN on Employee.ManagerID = Manager.ID;
+    Now lets say that instead of having two tables, you had one big table employee table with all members of the company that had the columns ID, Name, ManagerID
+    (ManagerID would be blank for executives at the company) How would you see the boss of each employee if there is only one table? SELF JOIN. 
+  - As you may have noticed, because of its irregularity, SELF JOIN is the only join that does not follow the join statement format. However, if you follow the format above, 
+    the solution to the manager employee problem would look something like this
+    
+    SELECT A.Employees AS Workers, B.Employees as Managers
+    FROM Employees A, Employees B 
+    WHERE A.ManagerID = B.ID;
+    
+  - See the bottom of this page: https://www.w3schools.com/sql/sql_join_self.asp for a really good example of understanding what self joins are used for and how they work.
