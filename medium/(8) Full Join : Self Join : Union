@@ -1,1 +1,40 @@
+For this lesson, you will learn how to join tables with Full Join, Self Join. Also, you will learn how to combine records
+from different SELECT statements into one column.
 
+Full Join and Self Join are the final two of the five join statements that are left to learn. We will follow a similar format for teaching these statements as we did 
+with the rest of the Join statements. We will use the same practice dataset as before.
+
+                                        Table 1 - Names                                              Table 2 - Salaries
+                                EmployeeID             Name                                  EmployeeID              Salary
+                                    1                 Amanda                                     2                   100000
+                                    2                 Bill                                       3                   80000
+                                    3                 Courtney                                   5                   65000
+                                    4                 David                                      6                   95000
+                                    5                 Eli                                        7                   80000
+                                    6                 Ferguson                                   8                   130000
+                                    7                 Gabriel                                    9                   140000
+
+Remember that JOIN statement format that you should follow whenever you join tables together.
+SELECT [columns] FROM [table1]
+[JOIN] [table2] ON [column].[table1] = [column].[table2];
+
+*Full Outer Join*
+SELECT [columns] FROM [table1]
+FULL OUTER JOIN [table2] ON [column].[table1] = [column].[table2];
+  - A FULL JOIN is like doing a LEFT and RIGHT join all in one statement. 
+  - The resulting table will be a combination of each table in which ALL of the records from both tables will appear.
+  - Using your knowledge of JOIN statements, try writing a FULL OUTER JOIN query of the Names and Salaries tables. The output should look like the table below.
+  
+                                                    EmployeeID         Name        Salary
+                                                         1            Amanda      
+                                                         2            Bill         100000
+                                                         3            Courtney     80000
+                                                         4            David        
+                                                         5            Eli          65000
+                                                         6            Ferguson     95000
+                                                         7            Gabriel      80000
+                                                         8                         130000
+                                                         9                         140000
+                                                         
+*Self Join*
+hello world my name is finlllllllley alirhgt areeeeeeee wee working now? That is what is eems like
