@@ -37,19 +37,38 @@ FULL OUTER JOIN [table2] ON [column].[table1] = [column].[table2];
                                                          9                         140000
                                                          
 *Self Join*
-SELECT A.[table name] AS [alias 1], B.[table name] AS [alias 2]
+SELECT A.[column] AS [alias 1], B.[column] AS [alias 2]
 FROM [table] A. [table B]
 WHERE [condition]
   - Out of the 5 different types of joins, self joins are the most irregular. Instead of joining with another table, SELF JOIN will join a table with itself.
   - Lets say that you have two tables, one for employees and one for managers. In the employee table is an ID, Name, and ManagerID. In the Manager table is a ID, and Name.
     You should already know that you would be able to see the name of each employee's manager by using a LEFT JOIN on Employee.ManagerID = Manager.ID;
-    Now lets say that instead of having two tables, you had one big table employee table with all members of the company that had the columns ID, Name, ManagerID
+    Now lets say that instead of having two tables, you had one big table employee table with all members of the company that had the columns ID, EmployeeName, ManagerID
     (ManagerID would be blank for executives at the company) How would you see the boss of each employee if there is only one table? SELF JOIN. 
   - As you may have noticed, because of its irregularity, SELF JOIN is the only join that does not follow the join statement format. However, if you follow the format above, 
     the solution to the manager employee problem would look something like this
     
-    SELECT A.Employees AS Workers, B.Employees as Managers
-    FROM Employees A, Employees B 
-    WHERE A.ManagerID = B.ID;
+        SELECT A.EmployeeName AS Workers, B.EmployeeName as Managers
+        FROM Employees A, Employees B 
+        WHERE A.ManagerID = B.ID;
     
   - See the bottom of this page: https://www.w3schools.com/sql/sql_join_self.asp for a really good example of understanding what self joins are used for and how they work.
+  
+*Union*
+SELECT [column(s)] FROM [table1]
+UNION
+SELECT [column(s)] FROM [table2];
+  - The UNION operator is used to combine the records of 2+ different select statements into one column.
+  - If you are going to select more than 1 column, they must be listed in the same order within the query.
+  - You can include WHERE clauses within any or all of the SELECT Statements.
+  - A UNION operator will not return duplicate values, so if you want to allow for duplicate values, simply use the 'UNION ALL' operator.
+  - Lets say you are a middle school principal with 3 different tables. A table for 6th, 7th, and 8th graders. In each of these tables is a column for Name, Email, Address.
+    If you wanted to obtain a list of all Emails of students at the school, you could used a union operator as such:
+    
+        SELECT Name, Email FROM SixthGrade
+        UNION
+        SELECT Name, Email FROM SeventhGrade
+        UNION
+        SELECT Name, Email FROM EigthGrade;
+  
+  
