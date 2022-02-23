@@ -31,3 +31,28 @@ Eg: Select Min(commission) from Agents
   - The Min and Max commands will locate the minimum or maximum value in a set of data, and then select that piece of data.
   - If there are multiple rows that have the same minimum value, it will not display the minimum multiple times. Rather, it will determine what that value is,
     and display it one time. 
+
+
+For the following problems we will be utilizing the AGENTS table. All problems can be solved using the Agents table.
+Make sure you have this table uploaded into your browser before starting
+
+
+
+1. Calculate the average commission of all of the agents.
+
+
+
+2. Sum the commissions of all the agents that have an “e” in their name.
+
+
+
+3. Count the number of agents that have a commission above the average. Select count(agent_code) from Agents.
+
+
+
+4. Find the smallest and largest agent code (Run two separate statements.
+
+
+
+5. Find the largest Agent Code that earns a commission below the average
+
