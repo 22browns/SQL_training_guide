@@ -1,5 +1,6 @@
-Count/Avg/Sum, Min, and Max)
 For this lesson, you will learn how to do some qick calculations using 'Count', 'Avg' and 'Sum' as well as find the minimum and maximum values in a dataset.
+
+                                                              LEARNING
 
 *Count*
 Count [column name]
@@ -32,11 +33,7 @@ Eg: Select Min(commission) from Agents
   - If there are multiple rows that have the same minimum value, it will not display the minimum multiple times. Rather, it will determine what that value is,
     and display it one time. 
 
-
-For the following problems we will be utilizing the AGENTS table. All problems can be solved using the Agents table.
-Make sure you have this table uploaded into your browser before starting
-
-
+                                                              PROBLEMS
 
 1. Calculate the average commission of all of the agents.
 
