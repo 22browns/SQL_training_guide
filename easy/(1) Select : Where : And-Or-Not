@@ -2,6 +2,7 @@ For the first lesson, you will learn how to use and write a select statement, so
 where statements by utilizing an 'and', 'or' or 'not' statement.
 
                                                               LEARNING
+                                                              
 *SELECT*
 Select  [column names]  from  [table]
 Eg: Select * from agents
@@ -33,27 +34,27 @@ Eg: Where age < 30 AND salary > 100000
 
                                                              PROBLEMS
 
-For the following problems we will be utilizing the 'Agents' table. Make sure you have this table uploaded into your own browser.
+1. For the following problems we will be utilizing the 'Agents' table. Make sure you have this table uploaded into your own browser.
 
 
 
-Select all values from the ‘Agents’ table.
+2. Select all values from the ‘Agents’ table.
 
 
 
-Select all of the agents that make a commission of ‘0.15’
+3. Select all of the agents that make a commission of ‘0.15’
 
 
 
-Select the names of the agents that work out of Bangalore
+4. Select the names of the agents that work out of Bangalore
 
 
 
-Select the Agent code and Phone number of the agents who work out of London OR Bangalore
+5. Select the Agent code and Phone number of the agents who work out of London OR Bangalore
 
 
 
-Select the Agent Code of the agents who earn a commission of 0.11, but are not named ‘Mukesh’
+6. Select the Agent Code of the agents who earn a commission of 0.11, but are not named ‘Mukesh’
 
 
 *Once you are done solving all problems visit the 'EASY Answer Key' File to see the best way to solve each problem. If you're answer is different than
