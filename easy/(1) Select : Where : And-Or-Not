@@ -41,19 +41,19 @@ Eg: Where age < 30 AND salary > 100000
 
 
 
-3. Select all of the agents that make a commission of ‘0.15’
+3. Select all of the agents that make a commission of ‘0.15’.
 
 
 
-4. Select the names of the agents that work out of Bangalore
+4. Select the names of the agents that work out of Bangalore.
 
 
 
-5. Select the Agent code and Phone number of the agents who work out of London OR Bangalore
+5. Select the Agent code and Phone number of the agents who work out of London OR Bangalore.
 
 
 
-6. Select the Agent Code of the agents who earn a commission of 0.11, but are not named ‘Mukesh’
+6. Select the Agent Code of the agents who earn a commission of 0.11, but are not named ‘Mukesh'.
 
 
 *Once you are done solving all problems visit the 'EASY Answer Key' File to see the best way to solve each problem. If you're answer is different than
