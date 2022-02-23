@@ -51,5 +51,4 @@ Eg: Select Min(commission) from Agents
 
 
 
-5. Find the largest Agent Code that earns a commission below the average
-
+5. Find the largest Agent Code that earns a commission below the average.
