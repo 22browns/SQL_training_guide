@@ -2,6 +2,7 @@ For this lesson, you will learn how to add new records with "Insert Into", chang
 and add, delete, or alter columns using "Alter Table".
 
                                                               LEARNING
+                                                              
 *Insert Into*
 INSERT INTO [table] ([column1], [column2], [column3], ...)
 VALUES ([value1], [value2], [value3], ...)
