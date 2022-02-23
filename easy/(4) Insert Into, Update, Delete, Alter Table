@@ -1,6 +1,7 @@
-Insert Into, Update, Delete, Alter Table
-For this lesson, you will learn how to 
+For this lesson, you will learn how to add new records with "Insert Into", change existing records through "Update", remove records through "Delete", 
+and add, delete, or alter columns using "Alter Table".
 
+                                                              LEARNING
 *Insert Into*
 INSERT INTO [table] ([column1], [column2], [column3], ...)
 VALUES ([value1], [value2], [value3], ...)
@@ -37,3 +38,19 @@ ALTER TABLE [table]
       - If there are no records in your table, you can convert between any two datatypes.
       - If there are already records, the two datatypes you are converting between must be compatible, otherwise you will get a conversion error.
   - Feel free to go back to the '(0) Introduction' file to see a list of all datatypes.
+ 
+                                                              PROBLEMS
+                                                              
+1. Add a new customer with the following parameters: customer code = C00026, customer name = John, customer city = Milwaukee, and grade = 5. 
+
+
+
+2. Add a new column called average grade and set the value of this ENTIRE column to the average.
+
+
+
+3. Update the grade value to “FAIL” wherever the grade is less than the average.
+
+
+
+4. Delete the information of any customer who failed. 
