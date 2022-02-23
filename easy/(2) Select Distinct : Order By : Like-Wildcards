@@ -1,5 +1,7 @@
 For this lesson, you will learn how to use a 'select distinct' statement, order output with 'order by', and compare numerics with a 'like statement.
 
+                                                              LEARNING
+
 *Select Distinct*
 Select Distinct [column name] from [table]
 Eg: Select Distinct Agent_Code from Customers
@@ -30,12 +32,7 @@ Eg: Where name like 'H%'
   - You can place multiple percent symbols like such ‘%2017%’ and this means that as long as 2017 appears somewhere within the fromDate, that row will 
     be selected
 
-
-
-For the following problems we will be utilizing the CUSTOMERS table. All problems can be solved using the Customers table.
-Make sure you have this table uploaded into your browser before starting
-
-
+                                                             PROBLEMS
 
 1. Select everything from the customer's table and Order the first names of all of the customers in ascending alphabetical order
 
