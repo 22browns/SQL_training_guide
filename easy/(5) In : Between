@@ -1,5 +1,6 @@
-
 For this lesson you will learn two more operators for having multiple where statements in a single query. 
+
+                                                              LEARNING
 
 *In*
 Where [column name] IN ([value1], [value 2], ...);
@@ -21,5 +22,15 @@ Eg: Where CustomerID BETWEEN 5 and 14;
     - Between statements can be applied to more than numeric values. If you place words in the place of numbers, it will find all values that are
       between the two indicated words alphabetically
     - Placing a 'NOT' statement before 'BETWEEN' i.e 'NOT BETWEEN' will find all values outside of the indicated range
- 
-  
+    
+                                                               PROBLEMS
+                                                               
+1. Find agents that have a commission between 0.13 and 0.15.
+
+
+
+2. Find all agents in the locations Australia, New York or India.
+
+
+
+3. Find Agents that have Phone Numbers between 010-20000000 and 070-50000000 that are located in San Jose or Mumbai.
