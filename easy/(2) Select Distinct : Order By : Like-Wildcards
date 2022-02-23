@@ -34,11 +34,11 @@ Eg: Where name like 'H%'
 
                                                              PROBLEMS
 
-1. Select everything from the customer's table and Order the first names of all of the customers in ascending alphabetical order
+1. Select everything from the customer's table and Order the first names of all of the customers in ascending alphabetical order.
 
 
 
-2. Create a list of working areas that contain an “o” somewhere in the middle (Cannot be first or last letter). Do not output any repeats
+2. Create a list of working areas that contain an “o” somewhere in the middle (Cannot be first or last letter). Do not output any repeats.
 
 
 
@@ -46,4 +46,4 @@ Eg: Where name like 'H%'
 
 
 
-4. Create a list of all of the agent codes that do not have a “1” in their name and order that list in descending order
+4. Create a list of all of the agent codes that do not have a “1” in their name and order that list in descending order.
