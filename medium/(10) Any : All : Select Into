@@ -1,0 +1,48 @@
+In this lesson, you will learn the ANY, ALL, and SELECT INTO statements.
+
+*Any*
+SELECT [column] FROM [table]
+WHERE [column] [operator] ANY
+[subquery]
+  - The ANY statement is used to compare a value to a list of values.
+  - The software will run through the list of records of the first select statement, and compares them one by one to records returned by the subquery.
+  - According to the operator that you provide, if any of the records of the subquery fit the equation, the value of the original query will be returned.
+  - Think of it is as performing many 'OR' statements. If any record fits the expression, it will be equated to TRUE.
+  
+*All*
+SELECT [column] FROM [table]
+WHERE [column] [operator] ALL
+[subquery]
+  - If the ANY statement is like doing many OR statements, ALL statements are like doing multiple AND statements
+  - The software will compare values of the first query to values of the subquery. When comparing the a value of the first query, the expression must 
+    be true with all of the records of the subquery. If that occurs, then the record of the first query will be returned.
+    
+*Select Into*
+SELECT [columns] 
+INTO [table / temp table]
+FROM [old table]
+WHERE [expression]
+  - SELECT INTO is used to take records from an existing table and place them into a new table.
+  - Its most important use is in placing records into a temporary table. A temp table is just a table used to temporarily store information.
+  - If you need to make a complex calculation for example, you could split the calculation into two parts, store the partial calculations in seperate
+    temp tables, do the final calculation between the two temporary tables, and then delete the temp tables.
+  - A temp table is signified by a # symbol. It is usually good to name the table something that signfies that it is a temp table such as '#temp_revenue'
+  - Here is an example of using temp tables. The example showcases how to find the profit of a business each year.
+  
+        SELECT year, sum(monthly_revenue) AS Yearly_Revenue INTO #temp_Revenue
+        FROM MonthlyStatistics
+        GROUP BY year;
+        
+        SELECT sum(monthly_expenses) AS Yearly_Expenses INTO #temp_Expenses
+        FROM MonthlyStatistics
+        GROUP BY Year;
+        
+        SELECT year, Yearly_Revenue - Yearly_Expenses FROM #temp_Revenue
+        LEFT JOIN #temp_Expenses ON #temp_Revenue.year = #temp_Expenses.year
+        
+        DROP TABLE #temp_Revenue;
+        DROP TABLE #temp_Expenses;
+    - In this example, we split up the revenue and expense calculations for each year, and then caculated the profit in the 3rd query.
+  - WHERE statements are not necessary, but they are an option when using SELECT INTO.
+    
+
