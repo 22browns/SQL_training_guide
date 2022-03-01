@@ -2,7 +2,7 @@
       Select * from Agents
       
    Output:
-   ![image](https://user-images.githubusercontent.com/98963705/156081844-4b78711a-2e5e-459f-9b8e-263b897be168.png)
+![image](https://user-images.githubusercontent.com/98963705/156081844-4b78711a-2e5e-459f-9b8e-263b897be168.png)
 
 2. Select all of the agents that make a commission of ‘0.15’.
       Select * from Agents where commission = ‘0.15’
