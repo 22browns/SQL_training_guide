@@ -1,29 +1,34 @@
 1. Select all values from the ‘Agents’ table.
-      Select * from Agents
+      Select * from Agents;
       
    Output:
-![image](https://user-images.githubusercontent.com/98963705/156081844-4b78711a-2e5e-459f-9b8e-263b897be168.png)
+   
+   ![image](https://user-images.githubusercontent.com/98963705/156081844-4b78711a-2e5e-459f-9b8e-263b897be168.png)
 
 2. Select all of the agents that make a commission of ‘0.15’.
-      Select * from Agents where commission = ‘0.15’
+      Select * from Agents where commission = 0.15;
 
    Output:
    
+   ![image](https://user-images.githubusercontent.com/98963705/156082715-96c2a528-fd6b-456b-84e8-4326e04806c6.png)
 
 3. Select the names of the agents that work out of Bangalore.
-      Select Agent_Name from Agents where Working_Area = ‘Bangalore’
+      Select Agent_Name from Agents where Working_Area = ‘Bangalore’;
 
    Output:
    
-
+   ![image](https://user-images.githubusercontent.com/98963705/156084956-7b14b8d8-6fac-469d-81aa-ca4db9f254ea.png)
+   
 4. Select the Agent code and Phone number of the agents who work out of London OR Bangalore.
-      Select Agent_code, Phone_number where Working_Area = 'London' or Working_Area = 'Bangalore’
+      Select Agent_code, Phone_number from Agents where Working_Area = 'London' or Working_Area = 'Bangalore’;
 
    Output:
 
+![image](https://user-images.githubusercontent.com/98963705/156085408-1a726e1a-896c-4a10-9233-1da433f6395a.png)
 
 5. Select the Agent Code of the agents who earn a commission of 0.11, but are not named ‘Mukesh'.
-      Select Agent_Code from Agents where commission = ‘0.11’ AND NOT Agent_Name = ‘Mukesh’
+      Select Agent_Code from Agents where commission = 0.11 AND NOT Agent_Name = ‘Mukesh’;
       
    Output:
       
+![image](https://user-images.githubusercontent.com/98963705/156085607-5c7875c7-c10f-4808-869b-b15efa121173.png)
