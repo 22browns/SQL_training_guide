@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `WORKING_AREA` varchar(35),
   `CUST_COUNTRY` varchar(20),
   `GRADE` decimal(10,0) DEFAULT NULL,
-  `OPENING_AMT` decimal(12,2) NOT NULL,
+  `OPENING_AMT` decimal(12,2),
   `PAYMENT_AMT` decimal(12,2),
   `DATE_OPENED` varchar(35),
   `PHONE_NO` varchar(17),
