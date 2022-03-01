@@ -69,12 +69,12 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `CUST_CODE` varchar(6) NOT NULL,
   `CUST_NAME` varchar(40) NOT NULL,
   `CUST_CITY` varchar(35) DEFAULT NULL,
-  `WORKING_AREA` varchar(35) NOT NULL,
-  `CUST_COUNTRY` varchar(20) NOT NULL,
+  `WORKING_AREA` varchar(35),
+  `CUST_COUNTRY` varchar(20),
   `GRADE` decimal(10,0) DEFAULT NULL,
   `OPENING_AMT` decimal(12,2) NOT NULL,
   `PAYMENT_AMT` decimal(12,2),
-  `DATE_OPENED` varchar(35) NOT NULL,
+  `DATE_OPENED` varchar(35),
   `PHONE_NO` varchar(17),
   `AGENT_CODE` varchar(6) DEFAULT NULL
 );
