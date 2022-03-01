@@ -1,0 +1,32 @@
+1.Use SQL Union to return the customer codes of the agent who has the Agent code A010 in both the customer’s table and days order table (Distinct values)
+      SELECT Cust_Code, Agent_Code FROM Customer
+      WHERE Agent_Code = 'A010'
+      UNION
+      SELECT Cust_Code, Agent_Code FROM daysorder
+      WHERE Agent_Code = 'A010'
+      ORDER BY Cust_Code;
+      
+      
+2.Use SQL Union to return the customer codes of the agent who has the Agent code A010 in both the customer’s table and days order table (All values)
+      SELECT Cust_Code, Agent_Code FROM Customer
+      WHERE Agent_Code = 'A010'
+      UNION ALL
+      SELECT Cust_Code, Agent_Code FROM daysorder
+      WHERE Agent_Code = 'A010'
+      ORDER BY Cust_Code;
+      
+      
+3.Use SQL Self join in order to match customers (A,B) from the Agent
+      SELECT A.Cust_Name AS Cust_Name1, B.Cust_Name AS Cust_Name2, A.Agent_Code
+      FROM Customer A, Customer B
+      WHERE A.Cust_Code <> B.Cust_Code
+      AND A.Agent_code = B.Agent_Code
+      ORDER BY A.Agent_Code;
+      
+      
+4.Use the SQL Full Join to select all customers and orders numbers
+      SELECT Customers.Cust_Name, Orders.ORD_NUM
+      FROM Customers
+      FULL OUTER JOIN Orders ON Customers.Cust_Name=Orders.Cust_Name
+      ORDER BY Customers.Cust_Name;
+//Full Outer Joins are not currently suopported on SQLite but this is the correct statement configuration
