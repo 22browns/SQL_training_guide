@@ -1,0 +1,20 @@
+1. Select all values from the ‘Agents’ table.
+      Select * from Agents
+
+
+2. Select all of the agents that make a commission of ‘0.15’.
+      Select * from Agents where commission = ‘0.15’
+
+
+3. Select the names of the agents that work out of Bangalore.
+      Select Agent_Name from Agents where Working_Area = ‘Bangalore’
+
+
+4. Select the Agent code and Phone number of the agents who work out of London OR Bangalore.
+      Select Agent_code, Phone_number where Working_Area = 'London' or Working_Area = 'Bangalore’
+
+
+5. Select the Agent Code of the agents who earn a commission of 0.11, but are not named ‘Mukesh'.
+      Select Agent_Code from Agents where commission = ‘0.11’ AND NOT Agent_Name = ‘Mukesh’
+      
+      
