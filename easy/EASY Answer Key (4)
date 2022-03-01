@@ -1,0 +1,23 @@
+1.Add a new customer where customer code = C00026, customer name = John, customer city = Milwaukee, and grade = 5;
+      Insert Into Customer ( Cust_Code, Cust_Name, Cust_City, Grade)
+      Values(C00026, John, Milwaukee, 5);
+      
+      
+2.Add a new column called average grade and set the value of this ENTIRE column to the average grade value
+      Alter Table Customer
+      Add Average_Grade float(53);
+//Note that they are two seperate statements
+      Update Customer
+      Set Average_Grade = (Select avg(grade) from customer);
+      
+      
+3.Update the grade value to “FAIL” wherever the grade is less than the average
+      Update Customer
+      Set Grade = ‘Fail’
+      Where grade < Average_Grade;
+      
+      
+4.Delete the information of any customer who failed
+      Delete from Customer
+      Where Grade = ‘Fail’;
+
