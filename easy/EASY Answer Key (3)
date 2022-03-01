@@ -1,0 +1,23 @@
+1.Calculate the average commission of all of the agents
+      Select avg(commission) from Agents;
+      
+      
+2.Sum the commissions of all the agents that have an “e” in their name
+      Select sum(commission) from Agents
+      Where agent_name like “%e%”;
+      
+      
+3.Count the number of agents that have a commission above the average
+      Select count(agent_code) from Agents
+      Where commission > (Select avg(commission) From Agents);
+      
+      
+4.Find the smallest and largest agent code (Run two separate statements)
+	    Select min(agent_code) from Agents;
+//Seperate statements
+	    Select max(agent_code) from Agents;
+      
+      
+Find the largest Agent Code that earns a commission below the average
+      Select max(Agent_Code) from Agents
+      Where commission < (Select avg(commission) from agents);
