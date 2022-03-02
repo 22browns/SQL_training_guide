@@ -1,1 +1,37 @@
+In this lesson you will learn to easily rerun lines of code, and determine the amount of time between two different dates.
+
+*Stored Procedure*
+CREATE PROCEDURE [procedure name / alias]
+AS
+[SQL Query]
+GO;
+  - A Stored Procedure is used to save a the syntax for a particular query so that it can be rerun at a later time without rewriting the query.
+  - The alias is what you will use at the later time to call the stored query.
+  - In order to call the Procedure when needed, use an EXECUTE statement as such:
+  
+           EXEC [procedure name];
+           
+  - Another functionality of Stored Procedures is to include adjustable parameters of a WHERE statement when you call the query.
+  - The following is what that syntax would look like.
+  
+          CREATE PROCEDURE [procedure name / alias] @[var] [datatype]
+          AS
+          SELECT [columns] FROM [table] WHERE [column] = @var
+          GO;
+          
+          EXEC [procedure name] @[var] = [value];
+          
+   - There is a lot of information there, so here is an example of the syntax when used on the Customers table.
+   
+          CREATE PROCEDURE SelectCity @City nvarchar(30)
+          AS
+          SELECT * FROM Customers WHERE City = @City
+          GO;
+          
+          EXEC SelectCity @City = 'New York';
+          
+    - Basically, these parameters are used to increase the adaptivity and funcitionality of a stored procedure so that it can be modified to fit
+      the query in question.
+
+*DateDiff*
 
