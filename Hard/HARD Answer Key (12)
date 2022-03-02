@@ -1,0 +1,15 @@
+1.Find all the customers who have null values for their payment amount
+      SELECT CUST_CODE, CUST_NAME, PAYMENT_AMNT
+      FROM Customers
+      WHERE PAYMENT_AMNT IS NULL
+      
+      
+2.Find all the customers who don’t have null values for their payment amount
+      SELECT CUST_CODE, CUST_NAME, PAYMENT_AMNT
+      FROM Customers
+      WHERE PAYMENT_AMNT IS NOT NULL
+      
+      
+3.Select the customers names and their grade multiplied by the addition of the opening payment and payment amount (Grade x (opening amount + payment amount)). If the payment value is null, replace it with zero and do the calculation. 
+      SELECT CUST_NAME, GRADE * (OPENING_AMNT + IFNULL(PAYMENT_AMNT, 0))
+      FROM Customers
