@@ -1,5 +1,5 @@
 1.Find out how many customers each Agent acquired and order that list from largest to smallest
-      Select Count(Ord_Num), Agent_Code From Orders
+      Select Count(Ord_Num) As CustomersAcquired, Agent_Code From Orders
       Group By Agent_Code
       Order By Count(Ord_Num) desc;
       
