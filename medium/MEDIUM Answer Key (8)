@@ -16,7 +16,7 @@
       ORDER BY Cust_Code;
       
       
-3.Use SQL Self join in order to match customers (A,B) from the Agent
+3.Use SQL Self join in order to match customers (A,B) from the same Agent
       SELECT A.Cust_Name AS Cust_Name1, B.Cust_Name AS Cust_Name2, A.Agent_Code
       FROM Customer A, Customer B
       WHERE A.Cust_Code <> B.Cust_Code
