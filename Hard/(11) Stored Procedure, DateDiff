@@ -34,4 +34,5 @@ GO;
       the query in question.
 
 *DateDiff*
-
+DATEDIFF( [start date] , [end date] );
+  - The DateDiff clause is used to determine the amount of time between two different dates. 
