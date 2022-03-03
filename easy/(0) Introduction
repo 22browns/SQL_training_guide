@@ -10,7 +10,7 @@ CAPITILIZATION RULES
       sElEcT * FRoM aGENts wheRe CoMmIsSiOn > 1000;
   - However, there are best practices to capitilization in SQL, so it is important to establish those best practices as quick as possible so others can read your code!
   
-  - Rule 1: Any overarching command (called a statement) should be in all caps. Statements are basically the keywords of SQL.
+  - *Rule 1*: Any overarching command (called a statement) should be in all caps. Statements are basically the keywords of SQL.
     The first few statements you will learn are SELECT, FROM, WHERE, AND, OR, NOT
   - Rule 2: Any reference to a table should be written in UpperCamelCase
   - Rule 3: Any reference to a specific column with a table should also be written in UpperCamelCase
@@ -18,15 +18,15 @@ CAPITILIZATION RULES
 ADDITIONAL INFORMATION
   - A 'record' is what we call a row/line of data. One record = One row. i.e a table with 5 rows has 5 records
   - A 'query' is one chunk of code. SQL is used to search for information within a database, and queries are what are used to ask those questions. 
-    A query is best defined as the culmination of the combination of statements to ask a specific question.
-  - Depending on the software one is using to write SQL queries, you will need to place a semicolon at the and of the query. 
+    A query is best defined as the combination of statements to ask a specific question.
+  - Depending on the software one is using to write SQL queries, you will need to place a semicolon at the end of the query. 
     If you are using the franchise.cloud.app website, it is needed.
     
 DATA TYPES
   - A data type specifies what kind of information an element of a table can hold. 
       -The two most basic data types are INT and VARCHAR. 
        INT can only hold integer values (1,2,3,4...) 
-       VARCHAR holds words by storing it as a sequence of characters (a character can be a numeric).
+       VARCHAR holds words or phrases by storing it as a sequence of characters (a character can be a numeric, space, or punctuation).
       - Below you will find a list of all data types that are supported by SQL
       
  *This information comes from a table of data types on w3schools.com. To see this table go to https://www.w3schools.com/sql/sql_datatypes.asp*
