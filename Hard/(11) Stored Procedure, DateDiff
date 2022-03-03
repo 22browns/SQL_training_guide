@@ -21,7 +21,7 @@ GO;
           
           EXEC [procedure name] @[var] = [value];
           
-   - There is a lot of information there, so here is an example of the syntax when used on the Customers table.
+   - There is a lot of new information, so here is an example of the syntax when used on the Customers table.
    
           CREATE PROCEDURE SelectCity @City nvarchar(30)
           AS
@@ -32,7 +32,10 @@ GO;
           
     - Basically, these parameters are used to increase the adaptivity and funcitionality of a stored procedure so that it can be modified to fit
       the query in question.
+    - Instead of having to rewrite the query to change the city, you can just use an @ parameter to easily change the WHERE clause
+    - There can be multiple parameters in the same Stored Procedure.
 
 *DateDiff*
 DATEDIFF( [start date] , [end date] );
   - The DateDiff clause is used to determine the amount of time between two different dates. 
+  - Depending on which SQL software you are using (SQLite, MYSQL, etc.) the syntax for this command differs.
