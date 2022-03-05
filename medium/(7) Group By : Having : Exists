@@ -1,3 +1,5 @@
+                                                                    LEARNING
+
 In this lesson, you will learn the GROUP BY, HAVING, and EXISTS Statements.
 
 *Group By*
@@ -22,3 +24,20 @@ WHERE EXISTS([subquery]);
   - What the exists operator does is check to see if any records from the original select statement match
     any records that are returned by the subquery.
   
+                                                                    LEARNING
+                                                                    
+1.Find out how many customers each Agent acquired and order that list from largest to smallest
+
+
+
+2.Find out which Agents had at least 3 or more orders above $2000 and order this list from smallest to largest
+
+
+
+3.Determine if there are any orders between the daysorder table and the order table that have the same order number but different order amounts
+
+
+
+4.Identify the names of the customers who ordered their items during the month of February (use the orders and customer tables)
+
+
