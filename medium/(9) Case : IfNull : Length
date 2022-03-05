@@ -1,3 +1,5 @@
+                                                             LEARNING
+
 In this lesson you will learn the CASE, IFNULL, and Length Statements.
 
 *Case*
@@ -34,3 +36,16 @@ LENGTH( [column] )
   - For example, LENGTH("Hello World.") would return the value '12' because there are 12 characters in the string.
   - Another example, LENGTH(1234) will return the value '4' because the number 1234 has 4 digits.
       
+                                                             PROBLEMS
+                                                             
+1.Identify our new and old customers and make a new column named Customer_Status where this characteristic is identified (new customers made their accounts from 2010 and later, and old customer made their accounts before 2010)
+
+
+
+2.Identify the balance of a customer using their Opening amount and payment amount (account for all of the null functions)
+
+
+
+3.Replace all of the dashes in the phone number column and then delete all of the information of the individuals who entered an invalid phone number or didn’t enter a payment amount
+
+
