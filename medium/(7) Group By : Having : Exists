@@ -24,7 +24,7 @@ WHERE EXISTS([subquery]);
   - What the exists operator does is check to see if any records from the original select statement match
     any records that are returned by the subquery.
   
-                                                                    LEARNING
+                                                                    PROBLEMS
                                                                     
 1.Find out how many customers each Agent acquired and order that list from largest to smallest
 
