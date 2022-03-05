@@ -109,7 +109,7 @@ INSERT INTO `customer` (`CUST_CODE`, `CUST_NAME`, `CUST_CITY`, `WORKING_AREA`, `
 ,('C00008','Karolina','Torento','Torento','Canada','1','7000.00',null,'2005-04-11','333-111-1130','A004')
 ,('C00003','Martin','Torento','Torento','Canada','2','8000.00','7000.00','2006-06-09','333-111-1131','A004')
 ,('C00009','Ramesh','Mumbai','Mumbai','India','3','8000.00','3000.00','2009-04-20','333-111-1132','A002')
-,('C000027','Ramesh','Mumbai','Mumbai','India','3','8000.00','3000.00','2009-04-20','333-111-1132','A005')
+,('C00027','Ramesh','Mumbai','Mumbai','India','3','8000.00','3000.00','2009-04-20','333-111-1132','A005')
 ,('C00014','Rangarappa','Bangalore','Bangalore','India','2','8000.00',null,'2008-11-15','333-111-1133','A001')
 ,('C00016','Venkatpati','Bangalore','Bangalore','India','2','8000.00','7000.00','2009-10-08','33-111-1134','A007')
 ,('C00011','Sundariya','Chennai','Chennai','India','3','7000.00','7000.00','2007-10-31','33-111-1135','A010');
