@@ -1,3 +1,5 @@
+                                                                    LEARNING
+
 For this lesson, you will learn how to join tables with Full Join, Self Join. Also, you will learn how to combine records
 from different SELECT statements into one column using the UNION Statement.
 
@@ -71,4 +73,20 @@ SELECT [column(s)] FROM [table2];
         UNION
         SELECT Name, Email FROM EigthGrade;
   
-  
+                                                                      PROBLEMS
+
+1.Use SQL Union to return the customer code of the agent who has the Agent code A010 in both the customer’s table and days order table (Distinct values)
+
+
+
+2.Use SQL Union to return the customer code of the agent who has the Agent code A010 in both the customer’s table and days order table (All values)
+
+
+
+3.Use SQL Self join in order to match customers (A,B) from the same city
+
+
+
+4.Use the SQL Full Join to select all customers and orders numbers
+
+
