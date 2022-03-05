@@ -1,3 +1,5 @@
+                                                              LEARNING
+
 In this lesson you will learn to easily rerun lines of code, and determine the amount of time between two different dates.
 
 *Stored Procedure*
@@ -39,3 +41,18 @@ GO;
 DATEDIFF( [start date] , [end date] );
   - The DateDiff clause is used to determine the amount of time between two different dates. 
   - Depending on which SQL software you are using (SQLite, MYSQL, etc.) the syntax for this command differs.
+
+                                                              LEARNING
+
+1.Create a procedure that will find the total balance of each agents customers
+
+
+
+2.Calculate the difference between account opening date and order date for customer ‘C00001’ and if the difference is less than a month label it a success and if it is over a month label it fail
+
+
+
+3.Create a running total for the orders table to see the total revenue that has been made after each order
+
+
+
