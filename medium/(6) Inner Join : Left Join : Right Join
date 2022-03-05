@@ -1,3 +1,5 @@
+                                                                    LEARNING
+
 For this lesson, you will learn 3 out of the 5 types of joins. The five types of joins are as follows:
 
 Inner Join, Left Join, Right Join, Full Join, Self Join
@@ -79,8 +81,17 @@ RIGHT JOIN [table2] ON [column].[table1] = [column].[table2];
                                                               7               80000            Gabriel
                                                               8               130000  
                                                               9               140000
- 
-  
-  
-  
-  
+                                                              
+                                                                    PROBLEMS
+                                                                    
+1.Return the customers city and country that also order from the orders table using an inner join statement (CUST_CODE)
+
+
+
+2.Use a left join to add Orders ON to the Customers table but only return customer name, city, and country as well as order number
+
+
+
+3.Use a Right join to add Customers ON to the Orders table but only return customer name, city, and country as well as order number
+
+
