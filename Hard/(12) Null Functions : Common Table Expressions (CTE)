@@ -1,1 +1,26 @@
+In this lesson you will learn some of the different Null Functions, as well as how to write Common Table Expressions (CTE).
+
+*Null Functions*
+Overall, there are 4 different Null Functions: IFNULL, IS NULL, IS NOT NULL.
+You should have already learned IFNULL in a previous lesson.
+
+*IFNULL*
+IFNULL( [column], [value] )
+Eg: SELECT ItemName, IFNULL(xWeight, 0) + IFNULL(yWeight, 0);
+  - IFNULL is used to tell the software what to do if an element of a table is NULL. (NULL means that the element is empty. There is no data in that slot.)
+  - It is a necessary function to know because if you attempt to make a calculation but an element is NULL, the entire expression will be returned as NULL.
+      - In some cases this may be OK, but in other situations you would still want the calculation to be done.
+  - In MYSQL, use {IFNULL} or {COALESCE}. In SQL Server use {ISNULL}. In Oracle use {NVL}. - The formatting   ______( [column], [value] )   stays the same for all.
+  
+*IS NULL*
+WHERE [column] IS NULL
+  - IS NULL is used to determine if an element of a table has a 'NULL' value. 
+  - NULL means that there is no data within the cell.
+      - One important note is that if you have a Varchar of '', that does not count as a NULL value because the element technically is storing information. 
+  - In the final lesson you will learn how to conduct data validation and this function is very useful in that scenario
+      - If you want to make sure that there are no empty data points, you can use the IS NULL function to search for those slots of the table.
+      
+*IS NOT NULL*
+WHERE [column] IS NOT NULL
+  - Just like the IS NULL function, IS NOT NULL is used to find any elements that do NOT have a NULL value. 
 
