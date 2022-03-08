@@ -35,6 +35,19 @@ LENGTH( [column] )
   - Length is an SQL function used to determine the amount of characters in a variable. (if it is a varchar, it will include any punctuation or spaces)
   - For example, LENGTH("Hello World.") would return the value '12' because there are 12 characters in the string.
   - Another example, LENGTH(1234) will return the value '4' because the number 1234 has 4 digits.
+  
+*Replace*
+UPDATE [table]
+SET [column name] REPLACE ([column name] , [original substring] , [new substring]);
+  -REPLACE is used to manipulate and format data points.
+  - Think of the replace statement more so as a "find and replace" feature. It will find every instance of the original substring, and replace them
+    with the new substring. 
+  - Strings are case sensitive in SQL, so make sure that you are using the correct capitilzation.
+  - An example of using the REPLACE statement would be to change the formatting of a birthday. Lets say that a column of birthdays has this format
+    month-day-year ---> 05-15-03. Lets say that someone wants to change the hyphens to forward slashes (05/15/03). The syntax would be as follows
+    
+        UPDATE Employees
+        SET Birthday REPLACE (Birthday, "-", "/");
       
                                                              PROBLEMS
                                                              
