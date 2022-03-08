@@ -1,1 +1,17 @@
+1.Check if all customers in the table have a grade equal to or above 0, if so, move all customers with a grade >= 0 into a new table called customers_good
+      SELECT CUST_NAME
+      INTO #customers_good
+      FROM customer
+      WHERE GRADE = ALL 
+      (SELECT GRADE FROM customers WHERE GRADE >= 0);
+
+
+
+2.Check if any customers in the table have a grade equal to or above 3, if so, move all customers with a grade >= 3 into a new table called customers_good. 
+**NOTE** SQL Lite does not support the “Any'' function. If you are interested in attempting this problem, utilize a different SQL server that supports full SQL not just Lite.
+      SELECT CUST_NAME
+      INTO #customers_good
+      FROM customer
+      WHERE GRADE = ANY 
+      (SELECT GRADE FROM customers WHERE GRADE >= 3);
 
