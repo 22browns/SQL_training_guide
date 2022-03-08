@@ -1,1 +1,18 @@
+In this lesson you will learn how to utilize different functions to validate data.
 
+*Data Validation*
+  - At this point in the lesson plan, you have learned almost all of the key SQL functions used for analyzing data.
+  - However, your SQL skills and analysis could be perfect, but you will never get useful results if your dataset is incorrect.
+  - This is where data validation comes in. Using functions that you already know, you can run queries to locate
+    pieces of data that are potentially incorrect in the database.
+  - Once those data points are located, it is up to you to correct the data points so that analysis of the data can begin.
+  - In this lesson, you will learn 3 statements that are important in validating data. They are not the only functions that you will have to use
+    validating data in the real world, but the rest of those functions have already been covered in the lesson plan!
+    
+    *Case*
+    
+    
+    *Length*
+    
+    
+    *Replace*
