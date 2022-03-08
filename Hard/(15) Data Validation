@@ -6,13 +6,58 @@ In this lesson you will learn how to utilize different functions to validate dat
   - This is where data validation comes in. Using functions that you already know, you can run queries to locate
     pieces of data that are potentially incorrect in the database.
   - Once those data points are located, it is up to you to correct the data points so that analysis of the data can begin.
-  - In this lesson, you will learn 3 statements that are important in validating data. They are not the only functions that you will have to use
-    validating data in the real world, but the rest of those functions have already been covered in the lesson plan!
+  - In this lesson, you will use 3 statements that are important in validating data (CASE, LENGTH, REPLACE) (Go back to Lesson 9 if you need 
+    a refresher). They are not the only functions that you will have to use validating data in the real world, but the rest of those functions 
+    have already been covered in the lesson plan!
+                     
+*Case*
+CASE 
+    WHEN [condition1] THEN [result1]
+    WHEN [condition2] THEN [result3]
+    WHEN [condition3] THEN [result3]
+    ELSE [else result]
+END AS [alias];
+  - The CASE statement is used to test for different conditions to make a determination about a set of data. 
+  - It will run through each condition until one of them eqautes to be TRUE. Once a condition tests TRUE, it will stop testing conditions and perform the corresponding result.
+  - If none of the conditions are met, then the 'Else Result' will be performed. 
+  - For example, lets say that you own a shipping company (like UPS). The cost of shipping an item is 100% based on its weight. To determine the cost of each shipment you could 
+    use a CASE statement like so:
+        
+        CASE
+            WHEN weight<10 THEN 'Small - $2.00'
+            WHEN weight >= 10 AND weight < 50 THEN 'Medium - $5.00'
+            WHEN weight >= 50 AND weight < 100 THEN 'Large - $10.00'
+            ELSE 'Too large to determine price'
+        END AS 'Size and Cost';
+
+*Length*
+LENGTH( [column] )
+  - Length is an SQL function used to determine the amount of characters in a variable. (if it is a varchar, it will include any punctuation or spaces)
+  - For example, LENGTH("Hello World.") would return the value '12' because there are 12 characters in the string.
+  - Another example, LENGTH(1234) will return the value '4' because the number 1234 has 4 digits.
+  
+*Replace*
+UPDATE [table]
+SET [column name] REPLACE ([column name] , [original substring] , [new substring]);
+  -REPLACE is used to manipulate and format data points.
+  - Think of the replace statement more so as a "find and replace" feature. It will find every instance of the original substring, and replace them
+    with the new substring. 
+  - Strings are case sensitive in SQL, so make sure that you are using the correct capitilzation.
+  - An example of using the REPLACE statement would be to change the formatting of a birthday. Lets say that a column of birthdays has this format
+    month-day-year ---> 05-15-03. Lets say that someone wants to change the hyphens to forward slashes (05/15/03). The syntax would be as follows
     
-    *Case*
-    
-    
-    *Length*
-    
-    
-    *Replace*
+        UPDATE Employees
+        SET Birthday REPLACE (Birthday, "-", "/");
+      
+                                                             PROBLEMS
+                                                             
+1.Identify our new and old customers and make a new column named Customer_Status where this characteristic is identified (new customers made their accounts from 2010 and later, and old customer made their accounts before 2010)
+
+
+
+2.Identify the balance of a customer using their Opening amount and payment amount (account for all of the null functions)
+
+
+
+3.Replace all of the dashes in the phone number column and then delete all of the information of the individuals who entered an invalid phone number or didn’t enter a payment amount
+
