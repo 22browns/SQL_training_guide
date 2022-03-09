@@ -22,7 +22,7 @@ Eg: Where age < 30
   - A where statement must be preceeded by a select statement (eg: select * from agents where age > 30)
 
 *AND/OR/NOT*
-Where [expression] [AND, OR, NOT] where [expression]
+Where [expression] [AND, OR, NOT] [expression]
 Eg: Where age < 30 AND salary > 100000
   - And, or, or not statements are used to combine 'where' statements so that there are multiple parameters that are being tested
   - AND means that both parameters must be true for the row of data to pass
