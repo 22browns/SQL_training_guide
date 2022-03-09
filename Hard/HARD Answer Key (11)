@@ -1,0 +1,26 @@
+1.Create a procedure that will find the total balance of each agents customers
+    ( EX: A003 , Total Customer Balance = 5000)
+      Create Procedure SumBalance
+      AS
+      Select Sum(Opening_AMT - IfNull(Payment_Amt,0)) as Balance, Agent_Code 
+      From customer
+      group by agent_code
+      Go;
+
+    
+
+2.Calculate the difference between account opening date and order date for customer ‘C00001’ and if the difference is less than a month label it a success and if it is over a month label it fail
+      Select DateDiff(Select Date_Opened From customer, Select Ord_Date from orders) as Difference
+      where customer.Cust_Code = 'C00001' and order.Cust_Code = 'C00001'
+      Case
+      WHen Difference <30 then 'Success'
+      Else 'Failure'
+      End As Status;
+
+
+
+3.Create a running total for the orders table to see the total revenue that has been made after each order
+      SELECT Ord_Num, Ord_Amount,
+      Sum(Ord_Amount) Over (Order By Ord_Num)
+      As TotalRevenue
+      From Orders
