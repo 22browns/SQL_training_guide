@@ -13,3 +13,28 @@
 3.Select the customers names and their grade multiplied by the addition of the opening payment and payment amount (Grade x (opening amount + payment amount)). If the payment value is null, replace it with zero and do the calculation. 
       SELECT CUST_NAME, GRADE * (OPENING_AMNT + IFNULL(PAYMENT_AMNT, 0))
       FROM Customers
+      
+      
+4.Delete all the duplicate customer values using cte and partition by 
+      WITH cte AS (
+        SELECT 
+          CUST_CODE 
+              CUST_NAME
+              CUST_CITY 
+              PHONE_NO 
+              ROW_NUMBER() OVER (
+                 PARTITION BY 
+                    CUST_NAME
+                    CUST_CITY
+                    PHONE_NO
+                 ORDER BY 
+                    CUST_NAME
+                    CUST_CITY
+                    PHONE_NO
+         ) row_num
+        FROM 
+        Customers
+      )
+      DELETE FROM cte
+      WHERE row_num > 1;
+
