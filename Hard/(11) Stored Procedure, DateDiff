@@ -1,6 +1,6 @@
                                                               LEARNING
 
-In this lesson you will learn to easily rerun lines of code, and determine the amount of time between two different dates.
+In this lesson you will learn to easily rerun lines of code, determine the amount of time between two different dates, and how to create running totals.
 
 *Stored Procedure*
 CREATE PROCEDURE [procedure name / alias]
@@ -41,6 +41,15 @@ GO;
 DATEDIFF( [start date] , [end date] );
   - The DateDiff clause is used to determine the amount of time between two different dates. 
   - Depending on which SQL software you are using (SQLite, MYSQL, etc.) the syntax for this command differs.
+  
+*Over / Partition By*
+Sum([column name]) Over(Partition by [column name] Order By [column name])
+  - The over clause is used to create running totals that aggregate the columns selected with each additional row.
+  - Compared to other aggregate function like avg(), the Over function allows the user to reference each datapoint and see how it affects the total.
+  - The over function is accompanied by Partition by and/or Order By functions.
+  - Partition By groups together data that have the same information in the specified column. For example, one could wrtie Partition By MONTH to have the data points grouped by month.
+      -Partition By differs from the actual group function because it does not actually combine their values, it simply organizes them into sections.
+  -Order By function accompishes the same task it always has by ordering the data in the queries output.
 
                                                               LEARNING
 
