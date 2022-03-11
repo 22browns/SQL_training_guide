@@ -1,0 +1,20 @@
+1.Find all customers that do not have a working area and set it equal to the customers city
+      SELECT * from customer WHERE working_area = NULL
+      SET WORKING_AREA = CUST_CITY  
+
+
+2.Identify the orders that are accidental repeats and delete them from the CUSTOMER table (In this case identify copies based on repeated names)
+      SELECT CUST_CODE, CUST_NAME, Count(CUST_CODE) as Quantity from Customer
+      Group by CUST_NAME
+      HAVING Quantity > 1;
+
+      Delete from Customer
+      Where CUST_CODE = 'C00026' or CUST_CODE = 'C00027';
+
+
+3.Identify the repeated data entry in the ORDERS table that has the same information in every category and delete it
+      SELECT ORD_NUM, CUST_CODE from orders
+      Group by CUST_CODE
+      HAVING Count(id) > 1
+      Delete from Orders
+      Where ORD_NUM = 200136
