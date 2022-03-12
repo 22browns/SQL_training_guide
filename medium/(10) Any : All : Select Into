@@ -44,8 +44,11 @@ WHERE [expression]
         
         DROP TABLE #temp_Revenue;
         DROP TABLE #temp_Expenses;
-    - In this example, we split up the revenue and expense calculations for each year, and then caculated the profit in the 3rd query.
+        
+  - In this example, we split up the revenue and expense calculations for each year, and then caculated the profit in the 3rd query.
   - WHERE statements are not necessary, but they are an option when using SELECT INTO.
+  - The DROP TABLE statement will delete the temporary table from existence. It is crucial to remember to drop the table. This is because if you forgot to do so, and try to run
+    the query more than once, you will get errors. This is because the software cannot create a table if its name is already taken by another table.
     
                                                              PROBLEMS
 
