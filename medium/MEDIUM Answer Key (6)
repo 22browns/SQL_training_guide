@@ -1,19 +1,19 @@
 1.Return the customers city and country that also order from the orders table using an inner join statement (CUST_CODE)
-      Select * from Orders
+      SELECT * FROM Orders
       INNER JOIN Customer ON Orders.CUST_CODE = (Select CUST_CODE from customer);
       
       
 2.Use a left join to add Orders ON to the Customers table but only return customer name, city, and country as well as order number
-      Select CUST_NAME, CUST_CITY, CUST_COUNTRY, Orders.ORD_NUM
-      From Customer
+      SELECT CUST_NAME, CUST_CITY, CUST_COUNTRY, Orders.ORD_NUM
+      FROM Customer
       LEFT JOIN Orders
-      on orders.CUST_CODE = (select CUST_CODE from customer);
+      ON orders.CUST_CODE = (select CUST_CODE from customer);
       
       
 3.Use a Right join to add Customers ON to the Orders table but only return customer name, city, and country as well as order number
       //Right joins are not currently supported on SQLite
-      Select Customer.CUST_NAME,Customer.CUST_CITY, Customer.CUST_COUNTRY, ORD_NUM
-      From Orders
-      left JOIN Customer
-      on orders.CUST_CODE = (Select CUST_CODE from customer);
+      SELECT Customer.CUST_NAME,Customer.CUST_CITY, Customer.CUST_COUNTRY, ORD_NUM
+      FROM Orders
+      LEFT JOIN Customer
+      ON orders.CUST_CODE = (Select CUST_CODE from customer);
 
