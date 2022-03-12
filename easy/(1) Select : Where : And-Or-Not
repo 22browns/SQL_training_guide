@@ -3,15 +3,16 @@ For the first lesson, you will learn how to use and write a select statement, so
                                                               LEARNING
                                                               
 *SELECT*
-Select  [column names]  from  [table]
-Eg: Select * from agents
+SELECT [column names]  FROM  [table]
+Eg: SELECT * FROM agents
   - Select is a statement that tells the computer that you want to access a table
   - * means “Everything”. This means that you want to view all of the contents of a given table
-  - The asterik can be replaced with specific column names of a table if you only want to view those
+  - The asterik can be replaced with specific column names of a table if you only want to view those. If there are multiple column names you would like to select, but not all
+    of them, use commas to seperate out the columns like so: SELECT Age, Name, Address FROM Customers;
 
 *WHERE*
-Where [expression]
-Eg: Where age < 30
+WHERE [expression]
+Eg: WHERE age < 30
   - Where statement gives a parameter to limit the amount of results that appear
   - The expression you are testing is going to be a simple mathematical expression with two numerics and an operator
   
@@ -22,8 +23,8 @@ Eg: Where age < 30
   - A where statement must be preceeded by a select statement (eg: select * from agents where age > 30)
 
 *AND/OR/NOT*
-Where [expression] [AND, OR, NOT] [expression]
-Eg: Where age < 30 AND salary > 100000
+WHERE [expression] [AND, OR, NOT] [expression]
+Eg: WHERE age < 30 AND salary > 100000
   - And, or, or not statements are used to combine 'where' statements so that there are multiple parameters that are being tested
   - AND means that both parameters must be true for the row of data to pass
   - OR means that at least 1 parameter must be true for the row of data to pass
