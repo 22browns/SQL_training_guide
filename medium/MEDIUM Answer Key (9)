@@ -1,23 +1,24 @@
 1.Identify our new and old customers and make a new column named Customer_Status where this characteristic is identified (new customers made their accounts from 2010 and later, and old customer made their accounts before 2010)
-      Select Cust_Code, Date_Opened,
-      Case
-      When Date_Opened < '2010%' then 'Old Customer'
-      Else 'New Customer'
-      End As Customer_Status
-      From customer
+      SELECT Cust_Code, Date_Opened,
+      CASE
+          WHEN Date_Opened < '2010%' THEN 'Old Customer'
+          ELSE 'New Customer'
+      END AS Customer_Status
+      FROM customer;
       
       
 2.Identify the balance of a customer using their Opening amount and payment amount (account for all of the null functions)
-      Select Opening_AMT - IFNULL(Payment_AMt,0)
-      As BALANCE_AMT
-      From Customer;
+      SELECT Opening_AMT - IFNULL(Payment_AMt,0)
+      AS BALANCE_AMT
+      FROM Customer;
       
       
 3.Replace all of the dashes in the phone number column and then delete all of the information of the individuals who entered an invalid phone number or didn’t enter a payment amount
-      Update customer
-      Set Phone_No = Replace(Phone_No, '-', '');
+      UPDATE Customer
+      SET Phone_No = Replace(Phone_No, '-', '');
 //Two seperate statements      
-      Delete from Customer 
-      where Payment_amt is null 
+      DELETE FROM Customer 
+      WHERE Payment_amt IS NULL 
       OR Length(Phone_NO) != 10;
-      Select * from customer;
+      
+      SELECT * FROM customer;
