@@ -3,8 +3,8 @@ For this lesson you will learn two more operators for having multiple where stat
                                                               LEARNING
 
 *In*
-Where [column name] IN ([value1], [value 2], ...);
-Eg: Where ORD_AMOUNT IN (1000,2000,3000);
+WHERE [column name] IN ([value1], [value 2], ...);
+Eg: WHERE ORD_AMOUNT IN (1000,2000,3000);
   - An 'IN' statement is used to wrtie multiple 'OR' statements quickly
       - Same thing as writing { Where [column] = [value1] OR [column] = [value2] ......}
   - This statement will select each record (row of data) where the specified column matches any one of the values within the parentheses
@@ -14,8 +14,8 @@ Eg: Where ORD_AMOUNT IN (1000,2000,3000);
       - This example Will provide the information of all of the agents who have completed an order greater than $4000 dollars. 
       
 *Between*
-Where [column] BETWEEN [value1] and [value2];
-Eg: Where CustomerID BETWEEN 5 and 14;
+WHERE [column] BETWEEN [value1] AND [value2];
+Eg: WHERE CustomerID BETWEEN 5 AND 14;
     - Between statements are used to indicate a range of values that you wish to select 
     - These statements are inclustiory of the maximum and minimum values that you indicated
         - Think of it as a 'greater than or equal' and 'less than or equal' sign  ------>  5 <= x <= 14
