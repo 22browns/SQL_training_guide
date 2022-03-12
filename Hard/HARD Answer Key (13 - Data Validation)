@@ -1,6 +1,6 @@
 1.Find all customers that do not have a working area and set it equal to the customers city
-      SELECT * from customer WHERE working_area = NULL
-      SET WORKING_AREA = CUST_CITY  
+      SELECT * FROM customer WHERE working_area = NULL
+      SET WORKING_AREA = CUST_CITY;  
 
 
 2.Identify the orders that are accidental repeats and delete them from the CUSTOMER table (In this case identify copies based on repeated names)
@@ -17,4 +17,4 @@
       GROUP BY CUST_CODE
       HAVING COUNT(id) > 1
       DELETE FROM Orders
-      WHERE ORD_NUM = 200136
+      WHERE ORD_NUM = 200136;
