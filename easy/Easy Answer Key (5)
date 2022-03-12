@@ -1,13 +1,13 @@
 1.Select the agent code and commission of agents that have a commission between 0.12 and 0.16 (do not include 0.12 and 0.16)
-      Select Agent_Code, Commission From Agents
-      Where Commission Between '0.13' and '0.15';
+      SELECT Agent_Code, Commission FROM Agents
+      WHERE Commission BETWEEN '0.13' AND '0.15';
       
       
 2.Select the agent code and working area of all agents in either London, New York or Mumbai
-      Select Agent_Code, Working_Area From Agents
-      Where Working_Area In ('London', 'New York', 'Mumbai');
+      SELECT Agent_Code, Working_Area FROM Agents
+      WHERE Working_Area IN ('London', 'New York', 'Mumbai');
       
       
 3.Select the agent name and phone number of agents that have phone numbers between 010-20000000 and 070-50000000 AND are located in San Jose or Mumbai
-      Select Agent_Name, Phone_No From Agents
-      Where Phone_No Between '010-20000000' and '070-50000000' and Working_Area In (‘San Jose’, ‘Mumbai’);
+      SELECT Agent_Name, Phone_No FROM Agents
+      WHERE Phone_No BETWEEN '010-20000000' AND '070-50000000' AND Working_Area IN (‘San Jose’, ‘Mumbai’);
