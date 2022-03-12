@@ -4,17 +4,17 @@
 
 
 2.Identify the orders that are accidental repeats and delete them from the CUSTOMER table (In this case identify copies based on repeated names)
-      SELECT CUST_CODE, CUST_NAME, Count(CUST_CODE) as Quantity from Customer
-      Group by CUST_NAME
+      SELECT CUST_CODE, CUST_NAME, Count(CUST_CODE) AS Quantity FROM Customer
+      GROUP BY CUST_NAME
       HAVING Quantity > 1;
 
-      Delete from Customer
-      Where CUST_CODE = 'C00026' or CUST_CODE = 'C00027';
+      DELETE FROM Customer
+      WHERE CUST_CODE = 'C00026' OR CUST_CODE = 'C00027';
 
 
 3.Identify the repeated data entry in the ORDERS table that has the same information in every category and delete it
-      SELECT ORD_NUM, CUST_CODE from orders
-      Group by CUST_CODE
-      HAVING Count(id) > 1
-      Delete from Orders
-      Where ORD_NUM = 200136
+      SELECT ORD_NUM, CUST_CODE FROM orders
+      GROUP BY CUST_CODE
+      HAVING COUNT(id) > 1
+      DELETE FROM Orders
+      WHERE ORD_NUM = 200136
