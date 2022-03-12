@@ -3,7 +3,7 @@
 In this lesson, you will learn the GROUP BY, HAVING, and EXISTS Statements.
 
 *Group By*
-SELECT [AVG/SUM etc...] from [table]
+SELECT [AVG/SUM etc...] FROM [table]
 GROUP BY [column name] 
   - GROUP BY is most useful when used alongside an aggregate statment such as SUM, AVG, COUNT etc..
   - What it does is it groups together records that have a matching value in the specified column.
@@ -17,12 +17,14 @@ GROUP BY [column(s)] HAVING [aggregate function condition]
   - HAVING is used in place of a where statement. This is because a where statement can not be used with an aggregate statement.
     i.e WHERE AVG(ORD_AMOUNT) > 50; This statement will not run on any SQL software; however, the following will
     HAVING AVG(ORD_AMOUNT) > 50;
+  - The main aggregate functions in SQL are MIN, MAX, SUM, AVG, and COUNT.
     
 *Exists*
 SELECT [columns] FROM [table]
 WHERE EXISTS([subquery]);
   - What the exists operator does is check to see if any records from the original select statement match
     any records that are returned by the subquery.
+  - Within the subquery, make sure to begin with another SELECT statment.
   
                                                                     PROBLEMS
                                                                     
