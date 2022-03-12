@@ -3,16 +3,16 @@ For this lesson, you will learn how to use a 'select distinct' statement, order 
                                                               LEARNING
 
 *Select Distinct*
-Select Distinct [column name] from [table]
-Eg: Select Distinct Agent_Code from Customers
+SELECT DISTINCT [column name] FROM [table]
+Eg: SELECT DISTINCT Agent_Code FROM Customers
   - Select Distinct is used to select and output values that are not duplicates
   - For the columns that you identify, it will take out any and all duplicate values, and display what is left
   - Take a look at the example (eg). Lets say that you only have access to a table of customers, each customer being associated with a working agent. 
     You could use Select Distinct to get a list of all agents without needing the Agents table.
     
 *Order by*
-Order by [column name] [asc/desc]
-Eg: Order by cust_name asc
+ORDER BY [column name] [asc/desc]
+Eg: ORDER BY cust_name asc
   - Order by is used to sort data into order according to the specifications that you give
   - Asc stand for 'ascending' and will sort the data in ascending order. In the example, customer names will be put in alphabetical order.
   - Desc stands for 'descending' and will sort the data in descending order. If you swap the asc for desc in the example, it will do reverse alphabetical order.
@@ -21,8 +21,8 @@ Eg: Order by cust_name asc
     SHOW AN EXAMPLE OF THIS
     
 *Like and Wildcards*
-Where [column name] like [value]
-Eg: Where name like 'H%'
+WHERE [column name] LIKE [value]
+Eg: WHERE name LIKE 'H%'
   - A like statement is used in place of a comparator in a mathematical expression (<,>,=)
   - Must put your phrase within single quotes
   - % symbol is a wildcard that is used to represent ‘anything’
