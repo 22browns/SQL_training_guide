@@ -43,7 +43,7 @@ DATEDIFF( [start date] , [end date] );
   - Depending on which SQL software you are using (SQLite, MYSQL, etc.) the syntax for this command differs.
   
 *Over / Partition By*
-Sum([column name]) Over(Partition by [column name] Order By [column name])
+SUM([column name]) OVER( PARTITION BY [column name] ORDER BY [column name])
   - The over clause is used to create running totals that aggregate the columns selected with each additional row.
   - Compared to other aggregate function like avg(), the Over function allows the user to reference each datapoint and see how it affects the total.
   - The over function is accompanied by Partition by and/or Order By functions.
