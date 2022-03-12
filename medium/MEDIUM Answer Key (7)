@@ -1,28 +1,28 @@
 1.Find out how many customers each Agent acquired and order that list from largest to smallest
-      Select Count(Ord_Num) As CustomersAcquired, Agent_Code From Orders
-      Group By Agent_Code
-      Order By Count(Ord_Num) desc;
+      SELECT COUNT(Ord_Num) AS CustomersAcquired, Agent_Code FROM Orders
+      GROUP BY Agent_Code
+      ORDER BY Count(Ord_Num) desc;
       
       
 2.Find out which Agents had at least 3 or more orders above $1000 and order this list from smallest to largest
-      Select Count(Ord_Num), Agent_Code From Orders
-      Where Ord_Amount > 1000
-      Group By Agent_Code
-      Having Count(Ord_Num) > 2
-      Order by Count(Ord_Num) asc;
+      SELECT COUNT(Ord_Num), Agent_Code FROM Orders
+      WHERE Ord_Amount > 1000
+      GROUP BY Agent_Code
+      HAVING COUNT(Ord_Num) > 2
+      ORDER BY COUNT(Ord_Num) asc;
       
       
 3.Determine if there are any orders between the daysorder table and the order table that have the same order number but different order amounts
-      Select Ord_Num, Ord_Amount
-      From orders
-      Where exists(Select Ord_Num From daysorder Where daysorder.Ord_Num = orders.Ord_Num And daysorder.Ord_Amount != orders.Ord_Amount)
-      Order by Ord_Num asc;
+      SELECT Ord_Num, Ord_Amount
+      FROM orders
+      WHERE EXISTS(SELECT Ord_Num FROM daysorder WHERE daysorder.Ord_Num = orders.Ord_Num AND daysorder.Ord_Amount != orders.Ord_Amount)
+      ORDER BY Ord_Num asc;
       
       
 4.Identify the names of the customers who ordered their items during the month of July (use the orders and customer tables)
-      Select Cust_Name
-      From customer
-      Where Exists (Select Cust_Code 
-                  From orders 
-                  Where orders.Cust_Code = customer.Cust_Code 
-                  and orders.Ord_Date like "2008-07%");
+      SELECT Cust_Name
+      FROM customer
+      WHERE EXISTS (SELECT Cust_Code 
+                  FROM orders 
+                  WHERE orders.Cust_Code = customer.Cust_Code 
+                  AND orders.Ord_Date like "2008-07%");
