@@ -12,8 +12,7 @@ CAPITILIZATION RULES
   
   - *Rule 1*: Any overarching command (called a statement) should be in all caps. Statements are basically the keywords of SQL.
     The first few statements you will learn are SELECT, FROM, WHERE, AND, OR, NOT
-  - Rule 2: Any reference to a table should be written in UpperCamelCase
-  - Rule 3: Any reference to a specific column with a table should also be written in UpperCamelCase
+  - Rule 2: Anytime you use a new statement that is fundamentally important, start a new line of code. This will just make it more readable. 
   
 ADDITIONAL INFORMATION
   - A 'record' is what we call a row/line of data. One record = One row. i.e a table with 5 rows has 5 records
@@ -21,6 +20,16 @@ ADDITIONAL INFORMATION
     A query is best defined as the combination of statements to ask a specific question.
   - Depending on the software one is using to write SQL queries, you will need to place a semicolon at the end of the query. 
     If you are using the franchise.cloud.app website, it is needed.
+    
+  - As you go through the training manual, you will notice that each statement that is taught will follow a similar pattern. That pattern is as follows:
+  
+  *STATEMENT*
+  Syntax Key
+  Eg: Using Syntax
+    - Description of the statment and how to use it.
+    
+  - With the syntax key, you will notice the common use of brackets. Brackets means that when writing the code, the bracketed section needs to be replaced with information
+    specific to the query you are writing. Make sure to omit the brackets as well.
     
 DATA TYPES
   - A data type specifies what kind of information an element of a table can hold. 
