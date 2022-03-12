@@ -1,19 +1,20 @@
 1. Select everything from the customer's table and Order the first names of all of the customers in ascending alphabetical order
-      Select * From customer 
-      Order By CUST_NAME asc;
+      SELECT * FROM customer 
+      ORDER BY CUST_NAME asc;
       
       
 2. Create a list of working areas that contain an “o” somewhere in the middle (Cannot be first or last letter). Do not output any repeats
-      Select distinct (working_area) From customer
-      Where working_area Like ‘_%o%_’;
+      SELECT DISTINCT(working_area) FROM customer
+      WHERE working_area LIKE ‘_%o%_’;
       
       
 3. Find all the customer codes that are greater than 9 (where the second to last number is not a 0) and order them in descending order.
-      Select cust_code from customer
-      Where cust_code Not Like ‘%0_’ ;
+      SELECT cust_code FROM customer
+      WHERE cust_code NOT LIKE ‘%0_’ ;
       
       
 4. Create a list of all of the agent codes that do not have a “1” in their name and order that list in descending order
-      Select distinct(agent_code) from customer where agent_code Not Like ‘%1%’
-      Order by agent_code desc;
+      SELECT DISTINCT(agent_code) FROM customer 
+      WHERE agent_code NOT LIKE ‘%1%’
+      ORDER BY agent_code desc;
 
